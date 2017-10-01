@@ -13,14 +13,14 @@
   "scripts": {
     "lint": "npm run lint:javascript && polymer lint",
     "lint:javascript": "eslint . --ext js,html --ignore-path .gitignore",
-    "lint:pre-commit": "eslint `git diff --staged --diff-filter=AM --name-only | tr '\n' ' '` --ext js,html --ignore-path .gitignore",
+    "lint-pre-commit": "eslint `git diff --cached --diff-filter=AM --name-only | grep .'html\|js\|css' | tr '\n' ' '`",
     "test": "polymer test",
     "test:integration": "polymer build # test that psk builds without error with the CLI"
   },
   "pre-commit": {
     "silent": true,
     "run": [
-      "lint"
+      "lint-pre-commit"
     ]
   }
 }
