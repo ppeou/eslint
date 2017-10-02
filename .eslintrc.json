@@ -18,6 +18,12 @@
   "globals": {
     "Polymer": true,
     "window": true,
-    "this": true
+    "this": true,
+    "document": true,
+    "suite": true,
+    "before": true,
+    "it": true,
+    "expect": true,
+    "sinon": true
   }
 }
