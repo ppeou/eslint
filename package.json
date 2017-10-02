@@ -12,7 +12,7 @@
   },
   "scripts": {
     "test": "polymer test",
-    "my-lint":"pre-commit.sh",
+    "my-lint":"pre-commit.sh --fix; && exit 0",
     "test:integration": "polymer build # test that psk builds without error with the CLI"
   },
   "pre-commit": {
